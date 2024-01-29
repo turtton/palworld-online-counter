@@ -6,7 +6,7 @@
 
 Linuxサーバーでの使用を想定しています
 
-PalworldのServerでは外部との疎通にRCONを使用しています。コマンドの実行には[ARRCON](https://github.com/radj307/ARRCON)
+PalworldのServerでは外部との疎通にRCONを使用しています。コマンドの実行には[rcon-cli](https://github.com/gorcon/rcon-cli)
 のようなツールが必要です。  
 このシステムにはRCONの実装は含まれていません  
 [/ShowPlayers](https://tech.palworldgame.com/server-commands#:~:text=your%20current%20location-,%2Fshowplayers,-Show%20information%20on)
