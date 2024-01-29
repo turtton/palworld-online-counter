@@ -3,7 +3,7 @@ package net.turtton
 import dev.kord.common.entity.Snowflake
 import dev.kord.core.Kord
 import dev.kord.core.behavior.channel.edit
-import dev.kord.core.entity.channel.VoiceChannel
+import dev.kord.core.entity.channel.TextChannel
 import dev.kord.core.event.gateway.ReadyEvent
 import dev.kord.core.on
 import dev.kord.gateway.Intent
@@ -52,7 +52,7 @@ suspend fun main() {
                         },
                     )
                 runCatching {
-                    kord.getChannelOf<VoiceChannel>(Snowflake(channel))?.edit {
+                    kord.getChannelOf<TextChannel>(Snowflake(channel))?.edit {
                         val count = names?.size?.toString() ?: "???"
                         name = "online-$count"
                         topic = names?.joinToString(", ") ?: "???"

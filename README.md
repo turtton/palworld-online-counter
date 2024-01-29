@@ -21,11 +21,11 @@ PalworldのServerでは外部との疎通にRCONを使用しています。コ�
 
 ### 環境変数
 
-| 環境変数名               | 説明                     |
-|---------------------|------------------------|
-| DISCORD_TOKEN       | DiscordのBOTのトークン       |
-| DISCORD_CHANNEL     | DiscordのBOTの出力先チャンネルID |
-| SHOW_PLAYER_COMMAND | Playerの一覧を出力するコマンド     |
+| 環境変数名               | 説明                                |
+|---------------------|-----------------------------------|
+| DISCORD_TOKEN       | DiscordのBOTのトークン                  |
+| DISCORD_CHANNEL     | DiscordのBOTの出力先チャンネルID(テキストチャンネル) |
+| SHOW_PLAYER_COMMAND | Playerの一覧を出力するコマンド                |
 
 ## ビルド方法
 
