@@ -1,5 +1,7 @@
 # Palworld Online Counter
 
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/turtton/palworld-online-counter/lint-and-build.yml?style=flat-square)
+
 パルワールドのDedicatedServerのオンライン人数を取得して、Discordに反映するBOT
 
 ## 使い方
@@ -35,3 +37,6 @@ cp ./build/libs/palworld-online-counter-*-all.jar ./palworld-online-counter.jar
 ```
 
 `java -jar palworld-online-counter.jar`で実行できます(JRE 17以上が必要です)
+
+https://github.com/turtton/palworld-online-counter/actions
+から最新のビルドを選択し、Artifactsからダウンロードすることもできます
