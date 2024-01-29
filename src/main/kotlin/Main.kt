@@ -54,7 +54,7 @@ suspend fun main() {
                 runCatching {
                     kord.getChannelOf<VoiceChannel>(Snowflake(channel))?.edit {
                         val count = names?.size?.toString() ?: "???"
-                        name = "Online: $count"
+                        name = "online-$count"
                         topic = names?.joinToString(", ") ?: "???"
                     }
                 }.onFailure {
