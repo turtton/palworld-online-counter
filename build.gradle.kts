@@ -1,3 +1,21 @@
+buildscript {
+    configurations.classpath {
+        resolutionStrategy {
+            force(
+                "com.pinterest.ktlint:ktlint-rule-engine:1.0.0",
+                "com.pinterest.ktlint:ktlint-rule-engine-core:1.0.0",
+                "com.pinterest.ktlint:ktlint-cli-reporter-core:1.0.0",
+                "com.pinterest.ktlint:ktlint-cli-reporter-checkstyle:1.0.0",
+                "com.pinterest.ktlint:ktlint-cli-reporter-json:1.0.0",
+                "com.pinterest.ktlint:ktlint-cli-reporter-html:1.0.0",
+                "com.pinterest.ktlint:ktlint-cli-reporter-plain:1.0.0",
+                "com.pinterest.ktlint:ktlint-cli-reporter-sarif:1.0.0",
+                "com.pinterest.ktlint:ktlint-ruleset-standard:1.0.0"
+            )
+        }
+    }
+}
+
 plugins {
     kotlin("jvm") version "1.9.22"
     id("org.jmailen.kotlinter") version "4.2.0"
