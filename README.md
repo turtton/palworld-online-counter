@@ -27,9 +27,11 @@ PalworldのServerでは外部との疎通にRCONを使用しています。コ�
 
 ## ビルド方法
 
+JDK 17以上が必要です
+
 ```shell
 ./gradlew shadowJar
 cp ./build/libs/palworld-online-counter-*-all.jar ./palworld-online-counter.jar
 ```
 
-`java -jar palworld-online-counter.jar`で実行できます
+`java -jar palworld-online-counter.jar`で実行できます(JRE 17以上が必要です)
