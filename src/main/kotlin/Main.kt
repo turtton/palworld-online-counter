@@ -14,9 +14,9 @@ import kotlinx.coroutines.launch
 import java.util.concurrent.TimeUnit
 import kotlin.time.Duration.Companion.minutes
 
-val DISCORD_TOKEN = "DISCORD_TOKEN"
-val DISCORD_CHANNEL = "DISCORD_CHANNEL"
-val SHOW_PLAYER_COMMAND = "SHOW_PLAYER_COMMAND"
+const val DISCORD_TOKEN = "DISCORD_TOKEN"
+const val DISCORD_CHANNEL = "DISCORD_CHANNEL"
+const val SHOW_PLAYER_COMMAND = "SHOW_PLAYER_COMMAND"
 
 val logger = KotlinLogging.logger("palworld-online-counter")
 
