@@ -32,6 +32,7 @@ repositories {
 
 dependencies {
     implementation("dev.kord:kord-core:0.13.1")
+    implementation("io.github.oshai:kotlin-logging-jvm:6.0.3")
     implementation("org.slf4j:slf4j-simple:2.0.7")
     testImplementation("org.jetbrains.kotlin:kotlin-test")
 }

@@ -8,6 +8,7 @@ import dev.kord.core.event.gateway.ReadyEvent
 import dev.kord.core.on
 import dev.kord.gateway.Intent
 import dev.kord.gateway.PrivilegedIntent
+import io.github.oshai.kotlinlogging.KotlinLogging
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import java.util.concurrent.TimeUnit
@@ -16,6 +17,8 @@ import kotlin.time.Duration.Companion.minutes
 val DISCORD_TOKEN = "DISCORD_TOKEN"
 val DISCORD_CHANNEL = "DISCORD_CHANNEL"
 val SHOW_PLAYER_COMMAND = "SHOW_PLAYER_COMMAND"
+
+val logger = KotlinLogging.logger("palworld-online-counter")
 
 suspend fun main() {
     val env = System.getenv()
@@ -42,12 +45,11 @@ suspend fun main() {
                     }.fold(
                         onSuccess = { process ->
                             val result = process.inputStream.bufferedReader().readText()
-                            println("Result: $result")
+                            logger.info { "Result:\n$result" }
                             result.split("\n").filter { it.isNotBlank() }.mapNotNull { it.split(",").firstOrNull() }
                         },
                         onFailure = {
-                            println("Failed to run command: $command")
-                            it.printStackTrace()
+                            logger.error(it) { "Failed to run command: $command" }
                             null
                         },
                     )
@@ -58,8 +60,7 @@ suspend fun main() {
                         topic = names?.joinToString(", ") ?: "???"
                     }
                 }.onFailure {
-                    println("Failed to update channel: $channel")
-                    it.printStackTrace()
+                    logger.error(it) { "Failed to update channel: $channel" }
                 }
                 delay(15.minutes)
             }
